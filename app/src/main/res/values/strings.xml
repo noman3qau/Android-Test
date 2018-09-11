@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GitHubRepoAndroid</string>
+
+    <string name="lbl_ok">OK</string>
+
+    <string name="error_server">Server request error.</string>
+    <string name="error_network">No network access.</string>
+    <string name="error_empty">Empty list.</string>
+
+    <string name="lbl_language">Language: %s</string>
+    <string name="lbl_author">Author: %s</string>
+    <string name="lbl_name">Name: %s</string>
+    <string name="lbl_description">Description: %s</string>
+    <string name="lbl_link">Link</string>
+
+
+</resources>

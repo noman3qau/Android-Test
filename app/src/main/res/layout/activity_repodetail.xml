@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.Html" />
+
+        <variable
+            name="viewModelRepoDetail"
+            type="com.github.android.functionality.repodetail.RepoDetailViewModel" />
+
+        <variable
+            name="clickListner"
+            type="com.github.android.functionality.repodetail.listener.OnRepoLinkClick" />
+
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@{String.format(@string/lbl_author, viewModelRepoDetail.obsRepository.author)}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@{String.format(@string/lbl_name, viewModelRepoDetail.obsRepository.name)}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@{String.format(@string/lbl_language, viewModelRepoDetail.obsRepository.language)}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@{String.format(@string/lbl_description, viewModelRepoDetail.obsRepository.description)}" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/linkColor"
+                android:onClick="@{() ->  clickListner.onRepoLinkClick(viewModelRepoDetail.obsRepository.url)}"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@string/lbl_link" />
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
